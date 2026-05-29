@@ -36,7 +36,7 @@ struct PersonalCardView: View {
 
                 
 
-                Text("IT Specialist & Developer")
+                Text("Trainee")
 
                     .font(.subheadline)
 

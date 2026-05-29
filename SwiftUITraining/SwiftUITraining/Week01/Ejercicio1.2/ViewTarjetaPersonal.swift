@@ -14,7 +14,7 @@ struct ProfileCardView: View {
 
                 name: "Ariana Del Carpio",
 
-                role: "IT Specialist",
+                role: "Trainee",
 
                 avatarSymbol: "person.crop.circle.badge.checkmark"
 
