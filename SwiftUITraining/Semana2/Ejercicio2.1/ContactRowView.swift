@@ -1,4 +1,3 @@
-
 import SwiftUI
 
 struct ContactRowView: View {
@@ -37,7 +36,7 @@ struct ContactRowView: View {
 }
 
 
-struct ContactsListView: View {
+struct ContactsManualListView: View {
     var body: some View {
         NavigationStack {
             List {
@@ -55,5 +54,5 @@ struct ContactsListView: View {
 }
 #Preview {
     // El Preview de Xcode te permite renderizar la lista completa directamente
-    ContactsListView()
+    ContactsManualListView()
 }
