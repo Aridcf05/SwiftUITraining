@@ -2,75 +2,60 @@ import SwiftUI
 
 struct Semana2View: View {
     var body: some View {
-        NavigationStack {
-            ZStack {
-                // Fondo gris suave nativo de iOS
-                Color(.systemGroupedBackground)
-                    .ignoresSafeArea()
-                
-                // Usamos un ScrollView vertical principal para que toda la pantalla sea deslizable
-                ScrollView(.vertical, showsIndicators: true) {
-                    VStack(spacing: 20) {
-                        // Título del Menú Principal
-                        Text("Mis Ejercicios SwiftUI")
-                            .font(.title2)
-                            .bold()
-                            .foregroundStyle(.primary)
-                            .padding(.top, 20) // Un poco de espacio superior inicial
-                        
-                        Text("Selecciona una sección para revisar el entregable correspondiente de la semana.")
-                            .font(.subheadline)
-                            .foregroundStyle(.secondary)
-                            .multilineTextAlignment(.center)
-                            .padding(.horizontal, 32)
-                        
-                        // Contenedor vertical de los accesos directos
-                        VStack(spacing: 16) {
-                            
-                            // BOTÓN 1: Abre el Ejercicio 2.1 (Pasándole un dato de prueba para solucionar el error)
-                            NavigationLink(destination: ContactsListView()) {
-                                Text("Ejercicio 2.1")
-                                    .font(.headline)
-                                    .foregroundStyle(.primary)
-                                    .frame(maxWidth: .infinity)
-                                    .padding()
-                                    .background(Color(.secondarySystemGroupedBackground)) // Fondo blanco
-                                    .cornerRadius(12)
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 12)
-                                            .stroke(Color.gray.opacity(0.2), lineWidth: 1)
-                                    )
-                            }
-                            
-                            // BOTÓN 2: Abre el Ejercicio 2.2 (Lista Completa Dinámica)
-                            NavigationLink(destination: ContactsListView()) {
-                                Text("Ejercicio 2.2")
-                                    .font(.headline)
-                                    .bold()
-                                    .foregroundStyle(.white)
-                                    .frame(maxWidth: .infinity)
-                                    .padding()
-                                    .background(Color.blue) // Color azul llamativo
-                                    .cornerRadius(12)
-                                    .shadow(color: Color.blue.opacity(0.2), radius: 5, x: 0, y: 3)
-                            }
-                            
+        ZStack {
+            Color(.systemGroupedBackground)
+                .ignoresSafeArea()
+            
+            ScrollView(.vertical, showsIndicators: true) {
+                VStack(spacing: 20) {
+                    Text("Ejercicios de la Semana")
+                        .font(.title2)
+                        .bold()
+                        .foregroundStyle(.primary)
+                        .padding(.top, 20)
+                    
+                    VStack(spacing: 16) {
+                        // BOTÓN 1
+                        NavigationLink(destination: ContactsListView()) {
+                            Text("Ejercicio 2.1")
+                                .font(.headline)
+                                .foregroundStyle(.primary)
+                                .frame(maxWidth: .infinity)
+                                .padding()
+                                .background(Color(.secondarySystemGroupedBackground))
+                                .cornerRadius(12)
                         }
-                        .padding(.horizontal, 24)
-                        .padding(.top, 10)
+                        
+                        // BOTÓN 2
+                        NavigationLink(destination: ContactsListView()) {
+                            Text("Ejercicio 2.2")
+                                .font(.headline)
+                                .bold()
+                                .foregroundStyle(.white)
+                                .frame(maxWidth: .infinity)
+                                .padding()
+                                .background(Color.blue)
+                                .cornerRadius(12)
+                        }
+                        
+                        // BOTÓN 3: Abre tu Ejercicio 2.3
+                        NavigationLink(destination: ScreenView()) {
+                            Text("Ejercicio 2.3")
+                                .font(.headline)
+                                .bold()
+                                .foregroundStyle(.white)
+                                .frame(maxWidth: .infinity)
+                                .padding()
+                                .background(Color.blue)
+                                .cornerRadius(12)
+                                .shadow(color: Color.blue.opacity(0.2), radius: 5, x: 0, y: 3)
+                        }
                     }
+                    .padding(.horizontal, 24)
                 }
             }
-            // Título opcional en la barra superior de navegación
-            .navigationTitle("Ruta de Aprendizaje")
-            .navigationBarTitleDisplayMode(.inline)
         }
-    }
-}
-
-// Preview corregido y seguro para la Semana 2
-#Preview {
-    NavigationStack {
-        Semana2View()
+        .navigationTitle("Semana 2")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
