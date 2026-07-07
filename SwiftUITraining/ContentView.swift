@@ -62,6 +62,18 @@ struct ContentView: View {
                                     .cornerRadius(12)
                                     .shadow(color: Color.blue.opacity(0.2), radius: 5, x: 0, y: 3)
                             }
+                            // BOTÓN 2: Abre el Ejercicio 1.3 (Banner con Capas)
+                            NavigationLink(destination: Semana3View()) {
+                                Text("Semana 3")
+                                    .font(.headline)
+                                    .bold()
+                                    .foregroundStyle(.white)
+                                    .frame(maxWidth: .infinity)
+                                    .padding()
+                                    .background(Color.blue) // Color azul llamativo
+                                    .cornerRadius(12)
+                                    .shadow(color: Color.blue.opacity(0.2), radius: 5, x: 0, y: 3)
+                            }
                             
                         }
                         .padding(.horizontal, 24)
