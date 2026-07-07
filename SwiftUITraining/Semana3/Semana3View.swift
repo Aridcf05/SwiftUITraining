@@ -17,7 +17,7 @@ struct Semana3View: View {
                     VStack(spacing: 16) {
                         // BOTÓN 1
                         NavigationLink(destination: ContadorView()) {
-                            Text("Ejercicio 3.1 (Contador)")
+                            Text("Ejercicio 3.1")
                                 .font(.headline)
                                 .bold()
                                 .foregroundStyle(.white)
@@ -28,7 +28,7 @@ struct Semana3View: View {
                         }
                         
                         // BOTÓN 2
-                        NavigationLink(destination: ContactsListView()) {
+                        NavigationLink(destination: FormularioCortoView()) {
                             Text("Ejercicio 3.2")
                                 .font(.headline)
                                 .bold()
@@ -38,10 +38,10 @@ struct Semana3View: View {
                                 .background(Color.blue)
                                 .cornerRadius(12)
                         }
-                        
-                        // BOTÓN 3: Abre tu Ejercicio 2.3
-                        NavigationLink(destination: ScreenView()) {
-                            Text("Ejercicio 3.3")
+
+                        // BOTÓN 3: Abre el Ejercicio 3.3 (Registro Completo con Form y Picker)
+                        NavigationLink(destination: RegistroCompletoView()) {
+                            Text("Ejercicio 3.3 (Registro Completo)")
                                 .font(.headline)
                                 .bold()
                                 .foregroundStyle(.white)
@@ -49,7 +49,7 @@ struct Semana3View: View {
                                 .padding()
                                 .background(Color.blue)
                                 .cornerRadius(12)
-                                .shadow(color: Color.blue.opacity(0.2), radius: 5, x: 0, y: 3)
+                                .shadow(color: Color.blue.opacity(0.15), radius: 5, x: 0, y: 3)
                         }
                     }
                     .padding(.horizontal, 24)
