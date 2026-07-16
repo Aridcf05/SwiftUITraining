@@ -74,6 +74,18 @@ struct ContentView: View {
                                     .cornerRadius(12)
                                     .shadow(color: Color.blue.opacity(0.2), radius: 5, x: 0, y: 3)
                             }
+                           
+                            NavigationLink(destination: Semana4View()) {
+                                Text("Semana 4")
+                                    .font(.headline)
+                                    .bold()
+                                    .foregroundStyle(.white)
+                                    .frame(maxWidth: .infinity)
+                                    .padding()
+                                    .background(Color.orange) // Color naranja para identificar la arquitectura
+                                    .cornerRadius(12)
+                                    .shadow(color: Color.orange.opacity(0.2), radius: 5, x: 0, y: 3)
+                            }
                             
                         }
                         .padding(.horizontal, 24)
