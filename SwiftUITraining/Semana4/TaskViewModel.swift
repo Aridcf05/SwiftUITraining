@@ -2,7 +2,6 @@ import SwiftUI
 import Combine
 
 class TaskViewModel: ObservableObject {
-    
     // Exponer la lista de tareas con @Published
     @Published var tasks: [TrainingTask] = [
         TrainingTask(title: "Completar la estructura MVVM", isCompleted: true),
