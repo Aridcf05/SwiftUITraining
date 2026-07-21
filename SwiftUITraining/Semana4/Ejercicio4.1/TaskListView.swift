@@ -1,10 +1,9 @@
 import SwiftUI
 
 struct TaskListView: View {
-    // Inicializamos el ViewModel con @StateObject en la pantalla raíz del flujo
-    @StateObject private var viewModel = TaskViewModel()
+    // Pasos 2: Leer el ViewModel compartido desde el entorno (en lugar de crearlo localmente)
+    @EnvironmentObject var viewModel: TaskViewModel
     
-    // Control de apertura del sheet modal
     @State private var showSheet: Bool = false
     
     var body: some View {
@@ -26,21 +25,24 @@ struct TaskListView: View {
                 } else {
                     List {
                         ForEach(viewModel.tasks) { task in
-                            HStack {
-                                Button(action: {
-                                    viewModel.toggleTaskCompletion(task: task)
-                                }) {
-                                    Image(systemName: task.isCompleted ? "checkmark.circle.fill" : "circle")
-                                        .foregroundColor(task.isCompleted ? .green : .blue)
-                                        .font(.title3)
+                            // Pasos 3: Al pulsar, navegamos a la pantalla de detalle de la tarea
+                            NavigationLink(destination: TaskDetailView(taskID: task.id)) {
+                                HStack {
+                                    Button(action: {
+                                        viewModel.toggleTaskCompletion(task: task)
+                                    }) {
+                                        Image(systemName: task.isCompleted ? "checkmark.circle.fill" : "circle")
+                                            .foregroundColor(task.isCompleted ? .green : .blue)
+                                            .font(.title3)
+                                    }
+                                    .buttonStyle(.plain)
+                                    
+                                    Text(task.title)
+                                        .strikethrough(task.isCompleted)
+                                        .foregroundColor(task.isCompleted ? .secondary : .primary)
+                                    
+                                    Spacer()
                                 }
-                                .buttonStyle(.plain)
-                                
-                                Text(task.title)
-                                    .strikethrough(task.isCompleted)
-                                    .foregroundColor(task.isCompleted ? .secondary : .primary)
-                                
-                                Spacer()
                             }
                         }
                         .onDelete { indexSet in
@@ -52,7 +54,6 @@ struct TaskListView: View {
             }
             .navigationTitle("Mis Tareas")
             .toolbar {
-                // Botón "+" en el toolbar para abrir el modal
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {
                         showSheet = true
@@ -61,8 +62,8 @@ struct TaskListView: View {
                     }
                 }
             }
-            // Presentación modal del sheet
             .sheet(isPresented: $showSheet) {
+                // Modificado para que la modal consuma el Environment de forma segura si es necesario
                 NewTaskView(viewModel: viewModel)
             }
         }
@@ -70,7 +71,9 @@ struct TaskListView: View {
 }
 
 #Preview {
+    // Criterio: La app no crashea en previews/pruebas por falta de inyección
     NavigationStack {
         TaskListView()
+            .environmentObject(TaskViewModel())
     }
 }
