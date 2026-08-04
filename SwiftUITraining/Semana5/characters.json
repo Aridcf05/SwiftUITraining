@@ -1,0 +1,43 @@
+
+[
+  {
+    "character_id": 1,
+    "full_name": "Luke Skywalker",
+    "race": "Human",
+    "planet": "Tatooine",
+    "jedi": true,
+    "years_old": 23
+  },
+  {
+    "character_id": 2,
+    "full_name": "Leia Organa",
+    "race": "Human",
+    "planet": "Alderaan",
+    "jedi": false,
+    "years_old": 23
+  },
+  {
+    "character_id": 3,
+    "full_name": "Han Solo",
+    "race": "Human",
+    "planet": "Corellia",
+    "jedi": false,
+    "years_old": 32
+  },
+  {
+    "character_id": 4,
+    "full_name": "Yoda",
+    "race": "Unknown",
+    "planet": "Dagobah",
+    "jedi": true,
+    "years_old": 900
+  },
+  {
+    "character_id": 5,
+    "full_name": "Chewbacca",
+    "race": "Wookiee",
+    "planet": "Kashyyyk",
+    "jedi": false,
+    "years_old": 200
+  }
+]
