@@ -98,6 +98,17 @@ struct ContentView: View {
                                     .shadow(color: Color.orange.opacity(0.2), radius: 5, x: 0, y: 3)
                             }
                             
+                            NavigationLink(destination: PokemonListView()) {
+                                Text("POKEMON")
+                                    .font(.headline)
+                                    .bold()
+                                    .foregroundStyle(.white)
+                                    .frame(maxWidth: .infinity)
+                                    .padding()
+                                    .background(Color.purple) // Color naranja para identificar la arquitectura
+                                    .cornerRadius(12)
+                                    .shadow(color: Color.orange.opacity(0.2), radius: 5, x: 0, y: 3)
+                            }
                         }
                         .padding(.horizontal, 24)
                         .padding(.top, 10)
