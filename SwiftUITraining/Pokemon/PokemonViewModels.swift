@@ -1,6 +1,7 @@
 import Foundation
 import Combine
-// MARK: - ViewModel para la Lista
+
+// MARK: - ViewModel Lista
 @MainActor
 class PokemonListViewModel: ObservableObject {
     @Published var pokemons: [PokemonListItem] = []
@@ -13,14 +14,17 @@ class PokemonListViewModel: ObservableObject {
         
         do {
             self.pokemons = try await PokeAPIService.shared.fetchPokemonList()
+        } catch let error as NetworkError {
+            self.errorMessage = error.localizedDescription
         } catch {
-            self.errorMessage = "Error al obtener la lista de Pokémon."
+            self.errorMessage = "Error general: \(error.localizedDescription)"
         }
         
         isLoading = false
     }
 }
 
+// MARK: - ViewModel Detalle
 @MainActor
 class PokemonDetailViewModel: ObservableObject {
     @Published var pokemonDetail: PokemonDetail?
@@ -33,8 +37,10 @@ class PokemonDetailViewModel: ObservableObject {
         
         do {
             self.pokemonDetail = try await PokeAPIService.shared.fetchPokemonDetail(name: name)
+        } catch let error as NetworkError {
+            self.errorMessage = error.localizedDescription
         } catch {
-            self.errorMessage = "Error al cargar los datos de \(name)."
+            self.errorMessage = "Error al cargar datos de \(name): \(error.localizedDescription)"
         }
         
         isLoading = false
