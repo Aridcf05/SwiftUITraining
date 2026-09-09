@@ -11,14 +11,73 @@
 		B923840530339149009136A2 /* AsyncStreaming in Frameworks */ = {isa = PBXBuildFile; productRef = B923840430339149009136A2 /* AsyncStreaming */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B9F2B233305208B2006EB652 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B9D8F2072FE19D6C0012267F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9D8F20E2FE19D6C0012267F;
+			remoteInfo = SwiftUITraining;
+		};
+		B9F2B24330520A0B006EB652 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B9D8F2072FE19D6C0012267F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9D8F20E2FE19D6C0012267F;
+			remoteInfo = SwiftUITraining;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		B9D8F20F2FE19D6C0012267F /* SwiftUITraining.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUITraining.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9F2B22D305208B2006EB652 /* SwiftUITrainingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUITrainingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9F2B23F30520A0B006EB652 /* SwiftUITrainingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUITrainingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		B9F2B2383052093E006EB652 /* Exceptions for "SwiftUITraining" folder in "SwiftUITraining" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				ContadorTareas/SwiftUITrainingTests/TaskCounterViewModelTests.swift,
+				ContadorTareas/SwiftUITrainingUITests/TaskCounterUITests.swift,
+			);
+			target = B9D8F20E2FE19D6C0012267F /* SwiftUITraining */;
+		};
+		B9F2B23A30520941006EB652 /* Exceptions for "SwiftUITraining" folder in "SwiftUITrainingUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				ContadorTareas/SwiftUITrainingUITests/TaskCounterUITests.swift,
+			);
+			target = B9F2B22C305208B2006EB652 /* SwiftUITrainingUITests */;
+		};
+		B9F2B24B30520A7E006EB652 /* Exceptions for "SwiftUITraining" folder in "SwiftUITrainingTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				ContadorTareas/SwiftUITrainingTests/TaskCounterViewModelTests.swift,
+			);
+			target = B9F2B23E30520A0B006EB652 /* SwiftUITrainingTests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		B9D8F2112FE19D6C0012267F /* SwiftUITraining */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				B9F2B2383052093E006EB652 /* Exceptions for "SwiftUITraining" folder in "SwiftUITraining" target */,
+				B9F2B23A30520941006EB652 /* Exceptions for "SwiftUITraining" folder in "SwiftUITrainingUITests" target */,
+				B9F2B24B30520A7E006EB652 /* Exceptions for "SwiftUITraining" folder in "SwiftUITrainingTests" target */,
+			);
 			path = SwiftUITraining;
+			sourceTree = "<group>";
+		};
+		B9F2B22E305208B2006EB652 /* SwiftUITrainingUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SwiftUITrainingUITests;
+			sourceTree = "<group>";
+		};
+		B9F2B24030520A0B006EB652 /* SwiftUITrainingTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SwiftUITrainingTests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -33,6 +92,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B9F2B22A305208B2006EB652 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9F2B23C30520A0B006EB652 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -40,6 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				B9D8F2112FE19D6C0012267F /* SwiftUITraining */,
+				B9F2B22E305208B2006EB652 /* SwiftUITrainingUITests */,
+				B9F2B24030520A0B006EB652 /* SwiftUITrainingTests */,
 				B9D8F2102FE19D6C0012267F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,6 +123,8 @@
 			isa = PBXGroup;
 			children = (
 				B9D8F20F2FE19D6C0012267F /* SwiftUITraining.app */,
+				B9F2B22D305208B2006EB652 /* SwiftUITrainingUITests.xctest */,
+				B9F2B23F30520A0B006EB652 /* SwiftUITrainingTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,6 +156,52 @@
 			productReference = B9D8F20F2FE19D6C0012267F /* SwiftUITraining.app */;
 			productType = "com.apple.product-type.application";
 		};
+		B9F2B22C305208B2006EB652 /* SwiftUITrainingUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9F2B235305208B2006EB652 /* Build configuration list for PBXNativeTarget "SwiftUITrainingUITests" */;
+			buildPhases = (
+				B9F2B229305208B2006EB652 /* Sources */,
+				B9F2B22A305208B2006EB652 /* Frameworks */,
+				B9F2B22B305208B2006EB652 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B9F2B234305208B2006EB652 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				B9F2B22E305208B2006EB652 /* SwiftUITrainingUITests */,
+			);
+			name = SwiftUITrainingUITests;
+			packageProductDependencies = (
+			);
+			productName = SwiftUITrainingUITests;
+			productReference = B9F2B22D305208B2006EB652 /* SwiftUITrainingUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		B9F2B23E30520A0B006EB652 /* SwiftUITrainingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9F2B24530520A0B006EB652 /* Build configuration list for PBXNativeTarget "SwiftUITrainingTests" */;
+			buildPhases = (
+				B9F2B23B30520A0B006EB652 /* Sources */,
+				B9F2B23C30520A0B006EB652 /* Frameworks */,
+				B9F2B23D30520A0B006EB652 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B9F2B24430520A0B006EB652 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				B9F2B24030520A0B006EB652 /* SwiftUITrainingTests */,
+			);
+			name = SwiftUITrainingTests;
+			packageProductDependencies = (
+			);
+			productName = SwiftUITrainingTests;
+			productReference = B9F2B23F30520A0B006EB652 /* SwiftUITrainingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -86,11 +209,19 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 2650;
+				LastSwiftUpdateCheck = 2660;
 				LastUpgradeCheck = 2650;
 				TargetAttributes = {
 					B9D8F20E2FE19D6C0012267F = {
 						CreatedOnToolsVersion = 26.5;
+					};
+					B9F2B22C305208B2006EB652 = {
+						CreatedOnToolsVersion = 26.6;
+						TestTargetID = B9D8F20E2FE19D6C0012267F;
+					};
+					B9F2B23E30520A0B006EB652 = {
+						CreatedOnToolsVersion = 26.6;
+						TestTargetID = B9D8F20E2FE19D6C0012267F;
 					};
 				};
 			};
@@ -112,12 +243,28 @@
 			projectRoot = "";
 			targets = (
 				B9D8F20E2FE19D6C0012267F /* SwiftUITraining */,
+				B9F2B22C305208B2006EB652 /* SwiftUITrainingUITests */,
+				B9F2B23E30520A0B006EB652 /* SwiftUITrainingTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		B9D8F20D2FE19D6C0012267F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9F2B22B305208B2006EB652 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9F2B23D30520A0B006EB652 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -134,7 +281,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B9F2B229305208B2006EB652 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9F2B23B30520A0B006EB652 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B9F2B234305208B2006EB652 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B9D8F20E2FE19D6C0012267F /* SwiftUITraining */;
+			targetProxy = B9F2B233305208B2006EB652 /* PBXContainerItemProxy */;
+		};
+		B9F2B24430520A0B006EB652 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B9D8F20E2FE19D6C0012267F /* SwiftUITraining */;
+			targetProxy = B9F2B24330520A0B006EB652 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		B9D8F2182FE19D6E0012267F /* Debug */ = {
@@ -318,6 +492,84 @@
 			};
 			name = Release;
 		};
+		B9F2B236305208B2006EB652 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pe.SwiftUITrainingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SwiftUITraining;
+			};
+			name = Debug;
+		};
+		B9F2B237305208B2006EB652 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pe.SwiftUITrainingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SwiftUITraining;
+			};
+			name = Release;
+		};
+		B9F2B24630520A0B006EB652 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pe.SwiftUITrainingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftUITraining.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SwiftUITraining";
+			};
+			name = Debug;
+		};
+		B9F2B24730520A0B006EB652 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pe.SwiftUITrainingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftUITraining.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SwiftUITraining";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -335,6 +587,24 @@
 			buildConfigurations = (
 				B9D8F21B2FE19D6E0012267F /* Debug */,
 				B9D8F21C2FE19D6E0012267F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9F2B235305208B2006EB652 /* Build configuration list for PBXNativeTarget "SwiftUITrainingUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9F2B236305208B2006EB652 /* Debug */,
+				B9F2B237305208B2006EB652 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9F2B24530520A0B006EB652 /* Build configuration list for PBXNativeTarget "SwiftUITrainingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9F2B24630520A0B006EB652 /* Debug */,
+				B9F2B24730520A0B006EB652 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

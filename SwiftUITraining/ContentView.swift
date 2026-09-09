@@ -109,6 +109,17 @@ struct ContentView: View {
                                     .cornerRadius(12)
                                     .shadow(color: Color.orange.opacity(0.2), radius: 5, x: 0, y: 3)
                             }
+                            NavigationLink(destination: TaskCounterView()) {
+                                Text("Contador de Tareas")
+                                    .font(.headline)
+                                    .bold()
+                                    .foregroundStyle(.white)
+                                    .frame(maxWidth: .infinity)
+                                    .padding()
+                                    .background(Color.blue)
+                                    .cornerRadius(12)
+                            }
+                            .accessibilityIdentifier("nav_task_counter") // <-- Clave para que el test lo encuentre
                         }
                         .padding(.horizontal, 24)
                         .padding(.top, 10)
