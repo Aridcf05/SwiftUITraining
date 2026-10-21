@@ -8,6 +8,7 @@ final class TaskCounterUITests: XCTestCase {
         super.setUp()
         continueAfterFailure = false
         app = XCUIApplication()
+        app.launchArguments = ["-UITests_TaskCounter"] // <-- Esto le avisa a la app
         app.launch()
     }
     

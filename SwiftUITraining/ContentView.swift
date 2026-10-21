@@ -109,6 +109,7 @@ struct ContentView: View {
                                     .cornerRadius(12)
                                     .shadow(color: Color.orange.opacity(0.2), radius: 5, x: 0, y: 3)
                             }
+                            // BOTÓN ANTERIOR: Contador de Tareas
                             NavigationLink(destination: TaskCounterView()) {
                                 Text("Contador de Tareas")
                                     .font(.headline)
@@ -119,14 +120,27 @@ struct ContentView: View {
                                     .background(Color.blue)
                                     .cornerRadius(12)
                             }
-                            .accessibilityIdentifier("nav_task_counter") // <-- Clave para que el test lo encuentre
+                            .accessibilityIdentifier("nav_task_counter")
+
+                            // BOTÓN: Caso Práctico - Tareas Prioritarias
+                            NavigationLink(destination: TaskManagerView()) {
+                                Text("Tareas Prioritarias (Caso Práctico)")
+                                    .font(.headline)
+                                    .bold()
+                                    .foregroundStyle(.white)
+                                    .frame(maxWidth: .infinity)
+                                    .padding()
+                                    .background(Color(red: 0.0, green: 0.45, blue: 0.74))
+                                    .cornerRadius(12)
+                                    .shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: 2)
+                            }
+                            .accessibilityIdentifier("nav_priority_task_manager")
                         }
                         .padding(.horizontal, 24)
                         .padding(.top, 10)
                     }
                 }
             }
-            // Título opcional en la barra superior de navegación
             .navigationTitle("Ruta de Aprendizaje")
             .navigationBarTitleDisplayMode(.inline)
         }
