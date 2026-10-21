@@ -1,21 +1,18 @@
-//
-//  ContentView.swift
-//  RetoFirebaseApp
-//
-//  Created by Ariana Ileen Del Carpio Flores on 21/10/26.
-//
-
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var authViewModel = AuthViewModel()
+    @AppStorage("isDarkMode") private var isDarkMode: Bool = false
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        Group {
+            if authViewModel.userSession != nil {
+                HabitListView(authViewModel: authViewModel)
+            } else {
+                AuthView(authViewModel: authViewModel)
+            }
         }
-        .padding()
+        .preferredColorScheme(isDarkMode ? .dark : .light)
     }
 }
 
